@@ -1,7 +1,7 @@
 import QuizWebSocket from "./QuizWebSocket.js";
 import SceneManager from "./SceneManager.js";
 
-const url = "ws://localhost:8080";
+const url = "ws://16.171.173.219:8080";
 
 QuizWebSocket.get(url);
 SceneManager.get();
