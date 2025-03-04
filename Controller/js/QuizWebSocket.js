@@ -2,7 +2,7 @@ import SceneMananger from "./SceneManager.js"
 
 export default class QuizWebSocket {
     constructor(url) {
-        this.protocol = "AUDIENCE";
+        this.protocol = "CONTROLLER";
         this.connectionAttempts = 0;
         this.ws = new WebSocket(url, this.protocol);
         document.getElementById('root').innerText = "Connecting"

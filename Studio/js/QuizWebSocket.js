@@ -2,7 +2,7 @@ import SceneMananger from "./SceneManager.js"
 
 export default class QuizWebSocket {
     constructor(url) {
-        this.protocol = "AUDIENCE";
+        this.protocol = "STUDIO";
         this.connectionAttempts = 0;
         this.ws = new WebSocket(url, this.protocol);
         document.getElementById('root').innerText = "Connecting"
@@ -24,8 +24,8 @@ export default class QuizWebSocket {
         })
         this.ws.addEventListener('message', (e) => {
             console.log('Websocket message')
-            console.log(e)
-            console.log(this.ws)
+            // console.log(e)
+            // console.log(this.ws)
             let msg;
             try {
                 msg = JSON.parse(e.data)

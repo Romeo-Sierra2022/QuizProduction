@@ -1,4 +1,4 @@
-export default class aScene0 {
+export default class aScene4 {
     static htmlString = `
                     <div class="content-container">
                 <section class="title-section">
@@ -8,14 +8,13 @@ export default class aScene0 {
                 </section>
                 <section class="text-section">
                     <p>
-                        Welcome to our performance of Quiz. During the show, you
-                        will be asked to vote. Please check your phone and vote.
+                        We hope you enjoyed the show. Our next show will be Something in September.
                     </p>
                 </section>
             </div>
     `
     static render(root, vote) {
-        root.innerHTML = aScene0.htmlString
+        root.innerHTML = aScene4.htmlString
     }
     static setEventListeners() {
 
