@@ -41,6 +41,14 @@ wss.on("connection", (ws) => {
                     console.log(msg)
                     ws.send(JSON.stringify(msg))
                 }
+                if(msg.command === "SET_SCENE") {
+                    currentScene = msg.data;
+                    const ogMsg = new Message("SET_SCENE", currentScene);
+                    wss.clients.forEach(client => {
+
+                        client.send(JSON.stringify(ogMsg))
+                    })
+                }
             }
             break;
             case "CONTROLLER": {
@@ -48,7 +56,10 @@ wss.on("connection", (ws) => {
                 if(msg.command === "SET_SCENE") {
                     currentScene = msg.data;
                     const ogMsg = new Message("SET_SCENE", currentScene);
-                    ws.send(JSON.stringify(ogMsg))
+                    wss.clients.forEach(client => {
+
+                        client.send(JSON.stringify(ogMsg))
+                    })
                 }
             }
             break;
@@ -68,6 +79,7 @@ wss.on("connection", (ws) => {
     });
     ws.on("pong", (e) => {
         ws.isAlive = true;
+        console.log("PONG")
     });
 });
 wss.on("close", (e) => {
@@ -84,6 +96,7 @@ function heartbeat() {
         wss.clients.forEach(client => {
             if(client.isAlive && client.readyState === 1) {
                 client.ping()
+                client.isAlive = false;
             } else {
                 console.log("Client lost connection")
             }
