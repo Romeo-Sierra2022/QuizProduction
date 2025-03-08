@@ -3,7 +3,7 @@ import QuizWebSocket from "./QuizWebSocket.js";
 import SceneManager from "./SceneManager.js";
 
 // const url = "ws://16.171.173.219:8080";
-const url = "ws://localhost:8080";
+const url = "ws://13.60.34.242:8080";
 document.addEventListener('click', () => {
     Livefeed.get();
     QuizWebSocket.get(url);

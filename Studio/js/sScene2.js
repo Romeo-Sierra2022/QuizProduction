@@ -3,8 +3,7 @@ import Message from "./Message.js";
 
 export default class aScene2 {
     static htmlString = `
-        <h1 id="off-air">OFF AIR</h1>
-        <h1 id="audience-instruction">APPLAUSE</h1>
+        <div id="blank"></div>
 
 
     `;

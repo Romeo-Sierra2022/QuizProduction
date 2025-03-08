@@ -2,9 +2,11 @@ import SceneMananger from "./SceneManager.js"
 
 export default class QuizWebSocket {
     constructor(url) {
+        console.log(url)
         this.protocol = "AUDIENCE";
         this.connectionAttempts = 0;
         this.ws = new WebSocket(url, this.protocol);
+        console.log("Websocket", this.ws)
         document.getElementById('root').innerText = "Connecting"
         this.setEventListeners()
     }
@@ -21,6 +23,7 @@ export default class QuizWebSocket {
             console.log(e)
             console.log(this.ws)
             SceneMananger.get().setScene(0);
+            return false;
         })
         this.ws.addEventListener('message', (e) => {
             console.log('Websocket message')
@@ -43,6 +46,7 @@ export default class QuizWebSocket {
                 }
                 break
             }
+            return false;
         })
         this.ws.addEventListener('close', (e) => {
             console.log('Websocket Closed')
