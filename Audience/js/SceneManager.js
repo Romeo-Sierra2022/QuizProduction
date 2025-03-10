@@ -3,11 +3,14 @@ import aScene1 from "./aScene1.js";
 import aScene2 from "./aScene2.js"
 import aScene3 from "./aScene3.js"
 import aScene4 from "./aScene4.js";
+import aScene5 from "./aScene5.js";
+import aScene6 from "./aScene6.js";
+
 
 
 export default class SceneManager {
-    static scenes = [aScene0, aScene1, aScene2, aScene3, aScene4];
-    static sceneMap = [0,1,2,1,1,1,1,2,1,1,1,3,1,1,1,4];
+    static scenes = [aScene0, aScene1, aScene2, aScene3, aScene4, aScene5, aScene6];
+    static sceneMap = [0,1,2,2,2,2,2,2,2,2,2,2,2,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,4,2,2,5,2,2,2,2,2,4,2,2,6];
     constructor() {
         this.currentScene = 0;
         this.vote = {

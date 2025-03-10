@@ -1,18 +1,14 @@
-import QuizWebSocket from "./QuizWebSocket.js";
-import Message from "./Message.js";
-
-export default class aScene2 {
+export default class sScene2 {
     static htmlString = `
-        <div id="blank"></div>
-
-
-    `;
+        <h1>Studio Screen 2</h1>>
+    `
     static render(root, vote) {
-        root.innerHTML = aScene2.htmlString;
-        aScene2.setEventListeners();
+        root.innerHTML = sScene2.htmlString
     }
     static setEventListeners() {
 
     }
-    static getData() {}
+    static getData() {
+
+    }
 }

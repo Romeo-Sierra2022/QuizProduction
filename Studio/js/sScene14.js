@@ -1,9 +1,9 @@
-export default class sScene4 {
+export default class sScene14 {
     static htmlString = `
-        <h1>Studio Screen 4</h1>>
+        <h1>Studio Screen 14</h1>>
     `
     static render(root, vote) {
-        root.innerHTML = sScene4.htmlString
+        root.innerHTML = sScene14.htmlString
     }
     static setEventListeners() {
 

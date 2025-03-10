@@ -4,7 +4,7 @@ import cScene0 from "./cScene0.js";
 
 export default class SceneManager {
     static scenes = [cScene0];
-    static sceneMap = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+    static sceneMap = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
     constructor() {
         this.currentScene = 0;
         this.vote = {

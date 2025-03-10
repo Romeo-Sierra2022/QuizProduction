@@ -19,11 +19,13 @@ export default class sScene0 {
     static setEventListeners(root) {
         document.getElementById("btn-next").addEventListener('click', () => {
             let data = SceneManager.get().currentScene + 1;
+            if(data > SceneManager.sceneMap.length) data = SceneManager.sceneMap.length;
             let msg = JSON.stringify({command: "SET_SCENE", data})
             QuizWebSocket.get().ws.send(msg)
         })
         document.getElementById("btn-prev").addEventListener('click', () => {
             let data = SceneManager.get().currentScene - 1;
+            if(data < 0) data = 0;
             let msg = JSON.stringify({command: "SET_SCENE", data})
             QuizWebSocket.get().ws.send(msg)
         })

@@ -1,9 +1,9 @@
-export default class aScene1 {
+export default class sScene1 {
     static htmlString = `
         <img id="millionaire-logo" src="./res/millionaireLogoTrans.png"></img>
     `
     static render(root, vote) {
-        root.innerHTML = aScene1.htmlString
+        root.innerHTML = sScene1.htmlString
     }
     static setEventListeners() {
 

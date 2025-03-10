@@ -2,7 +2,7 @@ import Livefeed from "./Livefeed.js"
 
 export default class sScene0 {
     static htmlString = `
-                <video id="livestream"></video>
+                <h1>TEST SCREEN STUDIO</h1>>
     `
     static render(root, vote) {
         root.requestFullscreen()
