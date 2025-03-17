@@ -2,7 +2,7 @@ import QuizWebSocket from "./QuizWebSocket.js";
 import SceneManager from "./SceneManager.js";
 
 // const url = "ws://16.171.173.219:8080";
-const url = "wss://13.60.191.19:8080/websocket";
+const url = "ws://u28xwxjxgh.execute-api.eu-west-2.amazonaws.com/production/"
 
 
 QuizWebSocket.get(url);

@@ -5,7 +5,7 @@ export default class QuizWebSocket {
         console.log(url)
         this.protocol = "AUDIENCE";
         this.connectionAttempts = 0;
-        this.ws = new WebSocket(url, this.protocol);
+        this.ws = new WebSocket(url);
         console.log("Websocket", this.ws)
         document.getElementById('root').innerText = "Connecting"
         this.setEventListeners()
