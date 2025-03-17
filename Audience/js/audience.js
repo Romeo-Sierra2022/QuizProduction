@@ -3,6 +3,7 @@ import SceneManager from "./SceneManager.js";
 
 // const url = "ws://16.171.173.219:8080";
 const url = "wss://u28xwxjxgh.execute-api.eu-west-2.amazonaws.com/production/"
+console.log("URL:", url)
 
 
 QuizWebSocket.get(url);
